@@ -1,0 +1,152 @@
+I DID THE COURSE SURVEY!!!!!
+
+I used a HashSet to store the dictionary so that I could quickly add each word to it.  I could then ask if the dictionary contained a word.  I first lowercased the word, then took the punctuation away and then checked to see if dictionary.contains().
+
+I used two ArrayLists to store suggestions.  The first list creates suggestions and the second list could check to make sure the suggestions are in the dictionary before suggesting them to the user.  I struggled to get this part working.  It kept throwing out of bounds exceptions when trying to implement it.  So right now I just have it adding words to the suggestion without checking to see if they're in the dictionary.
+
+My edits() method is pretty self explanatory when you look at it and what it does.
+
+After the program has run, it writes each word to a new file and saves it.
+
+
+sample run 1:
+
+Andrews-MacBook-Pro:src andrewjoseph$ javac -cp .:algs4.jar spellcheck/SpellCheck.java
+Andrews-MacBook-Pro:src andrewjoseph$ java -cp .:algs4.jar spellcheck/SpellCheck spellcheck/words.txt spellcheck/mydoc.txt
+.banana: did you mean?
+1. banana
+2. .anana
+3. .bnana
+0. something else
+1
+doog: did you mean?
+1. oog
+2. dog
+3. doo
+0. something else
+2
+spoort: did you mean?
+1. poort
+2. soort
+3. sport
+0. something else
+3
+pooop: did you mean?
+1. ooop
+2. poop
+3. pooo
+0. something else
+2
+faart: did you mean?
+1. aart
+2. fart
+3. faat
+0. something else
+2
+faart: did you mean?
+1. aart
+2. fart
+3. faat
+0. something else
+2
+peeple: did you mean?
+1. eeple
+2. peple
+3. peele
+0. something else
+0
+type the word: people
+loww: did you mean?
+1. oww
+2. lww
+3. low
+0. something else
+3
+faat: did you mean?
+1. aat
+2. fat
+3. faa
+0. something else
+2
+mic: did you mean?
+1. ic
+2. mc
+3. mi
+0. something else
+0
+type the word: mic
+Andrews-MacBook-Pro:src andrewjoseph$
+
+Here's what the first sample run saved: poop" fart sick" apple" banana dog "talk sport dog. sport. sport poop fart fart fart talk, people people low fat mic
+
+sample run 2:
+
+Andrews-MacBook-Pro:src andrewjoseph$ javac -cp .:algs4.jar spellcheck/SpellCheck.java
+Andrews-MacBook-Pro:src andrewjoseph$ java -cp .:algs4.jar spellcheck/SpellCheck spellcheck/words.txt spellcheck/mydoc.txt
+.banana: did you mean?
+1. banana
+2. .anana
+3. .bnana
+0. something else
+0
+type the word: ...banana
+doog: did you mean?
+1. oog
+2. dog
+3. doo
+0. something else
+3
+spoort: did you mean?
+1. poort
+2. soort
+3. sport
+0. something else
+3
+pooop: did you mean?
+1. ooop
+2. poop
+3. pooo
+0. something else
+0
+type the word: oops
+faart: did you mean?
+1. aart
+2. fart
+3. faat
+0. something else
+2
+faart: did you mean?
+1. aart
+2. fart
+3. faat
+0. something else
+0
+type the word: art
+peeple: did you mean?
+1. eeple
+2. peple
+3. peele
+0. something else
+0
+type the word: people
+loww: did you mean?
+1. oww
+2. lww
+3. low
+0. something else
+3
+faat: did you mean?
+1. aat
+2. fat
+3. faa
+0. something else
+2
+mic: did you mean?
+1. ic
+2. mc
+3. mi
+0. something else
+2
+Andrews-MacBook-Pro:src andrewjoseph$
+
+Here's what sample run two saved: poop" fart sick" apple" ...banana doo "talk sport dog. sport. sport oops fart fart art talk, people people low fat mc

@@ -1,0 +1,67 @@
+sample run 1:
+
+Andrews-MacBook-Pro:src andrewjoseph$ javac -cp .:algs4.jar spellcheck/SpellCheck.java
+Andrews-MacBook-Pro:src andrewjoseph$ java -cp .:algs4.jar spellcheck/SpellCheck spellcheck/words.txt spellcheck/mydoc.txt
+.banana: did you mean?
+1. banana
+2. .anana
+3. .bnana
+0. something else
+1
+doog: did you mean?
+1. oog
+2. dog
+3. doo
+0. something else
+2
+spoort: did you mean?
+1. poort
+2. soort
+3. sport
+0. something else
+3
+pooop: did you mean?
+1. ooop
+2. poop
+3. pooo
+0. something else
+2
+faart: did you mean?
+1. aart
+2. fart
+3. faat
+0. something else
+2
+faart: did you mean?
+1. aart
+2. fart
+3. faat
+0. something else
+2
+peeple: did you mean?
+1. eeple
+2. peple
+3. peele
+0. something else
+0
+type the word: people
+loww: did you mean?
+1. oww
+2. lww
+3. low
+0. something else
+3
+faat: did you mean?
+1. aat
+2. fat
+3. faa
+0. something else
+2
+mic: did you mean?
+1. ic
+2. mc
+3. mi
+0. something else
+0
+type the word: mic
+Andrews-MacBook-Pro:src andrewjoseph$
