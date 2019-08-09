@@ -25,8 +25,8 @@ public class SpellCheck {
         
         In dict = new In(words);
         while (!dict.isEmpty()) {
-        String word = dict.readString();
-        dictionary.add(word);
+            String word = dict.readString();
+            dictionary.add(word);
         }    
     }
         
